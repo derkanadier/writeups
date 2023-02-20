@@ -642,7 +642,7 @@ Unfortunately, while the `DB` file contains SQL credentials, as evidenced by the
       SqlConnection sqlConnection = new SqlConnection("Data Source=ip;Initial Catalog=Orders;User ID=dev;Password=k8wdAYYKyhnjg3K");
     }
 
-Therefore, we must find another path. It is by inspecting the `Handler` file that one can start thinking about leveraging JSON deserialization vulnerability. More specifically, both the `Serialize` and `Deserialize` functions set the `TypeNameHandling` parameter to `4` instead of the default value `None`, which as specified [here](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_TypeNameHandling.htm):
+Therefore, we must find another path. It is by inspecting the `Handler` file that one can start thinking about leveraging JSON deserialization vulnerabilities. More specifically, both the `Serialize` and `Deserialize` functions set the `TypeNameHandling` parameter to `4` instead of the default value `None`, which as specified [here](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_TypeNameHandling.htm):
 
 > Includes the .NET type name when the type of the object being serialized is not the same as its declared type. Note that this doesn't include the root serialized object by default. To include the root object's type name in JSON you must specify a root type object with SerializeObject(Object, Type, JsonSerializerSettings) or Serialize(JsonWriter, Object, Type)
 
