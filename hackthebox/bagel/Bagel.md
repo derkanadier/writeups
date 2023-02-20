@@ -227,7 +227,7 @@ ID           Response   Lines    Word       Chars       Payload
 [...]
 ```
 
-Success! It turns out that numerous LFI strings are possible, but for our purposes we can utilize the most simple one (e.g., `../../../../<root of filesystem>`), which allows us to view `../../../../etc/passwd` and reaveal the user account name `phil`:
+Success! It turns out that numerous LFI strings are possible, but for our purposes we can utilize the most simple one (e.g., `../../../../<root of filesystem>`), which allows us to view `../../../../etc/passwd` and reveal the user account name `phil`:
 
 ```
 root:x:0:0:root:/root:/bin/bash
