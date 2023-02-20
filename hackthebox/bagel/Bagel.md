@@ -628,7 +628,7 @@ On the left hand side of the Assembly Explorer, one can find the decompiled code
 - Handler: defines JSON SerializerSettings
 - Orders: defines the `WriteOrder, ReadOrder` functions
 
-The full files are available [here]:(https://github.com/derkanadier/writeups/tree/main/hackthebox/bagel/bagel_server)
+The full files are available [here](https://github.com/derkanadier/writeups/tree/main/hackthebox/bagel/bagel_server)
 
 ## Exploitation
 
