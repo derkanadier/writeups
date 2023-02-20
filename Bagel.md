@@ -118,7 +118,7 @@ sudo vim /etc/hosts
 
 Now that we can navigate to `bagel.htb:8000` (and redirected to `bagel.htb:8000/?page=index.html`), we can notice a web-page for a fictional bagel shop:
 
-<!-- image -->
+![bagel](https://user-images.githubusercontent.com/44783555/220196622-49437fc4-60fd-4113-be30-398a0d5bcee7.png)
 
 Unfortunately, the webpage itself (including its source code) does not seem to contain any juicy information. 
 
@@ -617,7 +617,7 @@ Which point towards the following `.dll` file: `/opt/bagel/bin/Debug/net6.0/bage
 
 As per usual, let's download the file via the LFI we found previously. To analyze it let's take advantage of [JetBrain's dotPeek](https://www.jetbrains.com/decompiler/), which is essentially an efficient decompiler and does not require any license!
 
-<!-- image -->
+![dotPeek](https://user-images.githubusercontent.com/44783555/220196667-27858c92-0bf6-421d-b81f-3acb97cee365.PNG)
 
 On the left hand side of the Assembly Explorer, one can find the decompiled code for `bagel_server`, including:
 
@@ -628,8 +628,7 @@ On the left hand side of the Assembly Explorer, one can find the decompiled code
 - Handler: defines JSON SerializerSettings
 - Orders: defines the `WriteOrder, ReadOrder` functions
 
-The full files are available [here]:(link) 
-<!-- update link -->
+The full files are available [here]:(https://github.com/derkanadier/writeups/tree/main/hackthebox/bagel/bagel_server)
 
 ## Exploitation
 
